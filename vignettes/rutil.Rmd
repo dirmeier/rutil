@@ -1,0 +1,17 @@
+---
+title: "rutil"
+author: "Simon Dirmeier"
+date: "`r Sys.Date()`"
+output: rmarkdown::pdf_document
+vignette: >
+ %\VignetteIndexEntry{rutil}
+ %\VignetteEngine{knitr::rmarkdown}
+ %\usepackage[utf8]{inputenc}
+---
+
+## Introduction
+
+TODO
+
+## Author
+
