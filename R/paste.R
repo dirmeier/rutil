@@ -18,32 +18,37 @@
 # along with rutil. If not, see <http://www.gnu.org/licenses/>.
 
 
-#' @title Abstract clazz
-#'
-#' @name aclazz-class
-#' @rdname aclazz-class
-#'
-#' @description i am an abstract clazz class
-#'
-#' @slot .data  data
-setClass(
-  "aclazz",
-  contains = "VIRTUAL",
-  slots    = list(.data="data.frame"),
-  validity = function(object)
-  {
-    return (TRUE)
-  }
+
+#' @rdname paste-methods
+setGeneric(
+    ".paste",
+    function(lhs, rhs)
+    {
+        standardGeneric(".paste")
+    },
+    package = "rutil"
 )
 
-#' @title Clazz
-#'
-#' @name clazz-class
-#' @rdname clazz-class
-#'
-#' @description i am a clazz class
-setClass(
-  "clazz",
-  contains = "aclazz",  
-  prototype = prototype(.data=data.frame(NA))
+
+#' @rdname paste-methods
+setMethod(
+    ".paste",
+    signature = signature(lhs="character", rhs="character"),
+    function(lhs, rhs) paste0(lhs, rhs)
 )
+
+
+#' @title Do some paste operation.
+#'
+#' @export
+#' @docType methods
+#' @rdname paste-methods
+#'
+#' @param lhs  the left hand side
+#' @param rhs  the right hand side
+#'
+#'
+#' @return  returns a pasted value
+#' @examples
+#'  "a" %+% "b"
+`%+%` <- function(lhs, rhs) .paste(lhs, rhs)

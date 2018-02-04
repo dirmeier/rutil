@@ -18,19 +18,22 @@
 # along with rutil. If not, see <http://www.gnu.org/licenses/>.
 
 
-context("hello")
+context("paste")
 
 
-testthat::test_that("i know my math", {
-    testthat::equal("welcome to R-bones\n", f())
+testthat::test_that("scalars are pasted correctly", {
+    testthat::expect_equal("a" %+% "a", "aa")
 })
 
-testthat::test_that("i know my math", {
-    testthat::expect_false("wrong" == g())
+testthat::test_that("scalars and vectors are pasted correctly", {
+    testthat::expect_equal("a" %+% c("a", "a"), c("aa", "aa"))
 })
 
-if (requireNamespace("lintr", quietly = TRUE)) {
-  testthat::test_that("package has style", {
-    lintr::expect_lint_free()
-  })
-}
+
+testthat::test_that("vectors and vectors are pasted correctly", {
+    testthat::expect_equal(c("a", "a") %+% c("a", "a"), c("aa" ,"aa"))
+})
+
+testthat::test_that("only characters work", {
+    testthat::expect_error("a" %+% 1)
+})
