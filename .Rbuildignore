@@ -1,3 +1,6 @@
+.codecov.yml
+.yo-rc.json
+TODO.md
 ^.*\.Rproj$
 ^\.Rproj\.user$
 .gitignore

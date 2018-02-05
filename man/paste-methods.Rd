@@ -21,6 +21,9 @@ lhs \%+\% rhs
 \value{
 returns a pasted value
 }
+\description{
+Do some paste operation.
+}
 \examples{
  "a" \%+\% "b"
 }

@@ -40,6 +40,8 @@ setMethod(
 
 #' @title Do some paste operation.
 #'
+#' @description Do some paste operation.
+#'
 #' @export
 #' @docType methods
 #' @rdname paste-methods

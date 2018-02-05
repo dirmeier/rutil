@@ -4,7 +4,7 @@ Title: rutil
 Version: 0.1
 Date: 2018/02/02
 Authors@R: person("Simon", "Dirmeier", email = "simon.dirmeier@web.de", role = c("aut", "cre"))
-Description: Some R utility functions and operators
+Description: Some R utility functions and operators.
 URL: https://github.com/dirmeier/rutil
 BugReports: https://github.com/dirmeier/rutil/issues
 License: GPL-3
@@ -16,9 +16,6 @@ Suggests:
 VignetteBuilder: knitr
 RoxygenNote: 6.0.1
 SystemRequirements: C++11
-LinkingTo:
-    Rcpp
 Imports:
-    Rcpp,
-    purrr
-NeedsCompilation: yes
+    purrr,
+    methods
