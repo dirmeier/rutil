@@ -2,10 +2,13 @@
 % Please edit documentation in R/themes.R
 \name{scale_color_continuous}
 \alias{scale_color_continuous}
-\title{Fill scale}
+\title{Color scale}
 \usage{
 scale_color_continuous(set = "blue")
 }
+\arguments{
+\item{set}{the color set to use}
+}
 \description{
-Several fill scalings.
+Several color scalings.
 }

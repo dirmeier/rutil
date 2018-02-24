@@ -6,6 +6,9 @@
 \usage{
 scale_fill_continuous(set = "blue")
 }
+\arguments{
+\item{set}{the color set to use}
+}
 \description{
 Several fill scalings.
 }

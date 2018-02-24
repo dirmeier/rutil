@@ -6,6 +6,11 @@
 \usage{
 manual_discrete_colors(set = c("a"), alpha = 1)
 }
+\arguments{
+\item{set}{the color set to use}
+
+\item{alpha}{alpha}
+}
 \description{
 Collection of discrete color palettes
 }
