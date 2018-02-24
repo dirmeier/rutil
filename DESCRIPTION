@@ -18,4 +18,6 @@ RoxygenNote: 6.0.1
 SystemRequirements: C++11
 Imports:
     purrr,
-    methods
+    methods,
+    ggplot2,
+    ggsci
