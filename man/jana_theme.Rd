@@ -6,6 +6,11 @@
 \usage{
 jana_theme(title.hjust = 0, legend_pos = "bottom")
 }
+\arguments{
+\item{title.hjust}{hjust of title}
+
+\item{legend_pos}{position of legend}
+}
 \description{
 This theme changes font sizes for plots used in papers
 }

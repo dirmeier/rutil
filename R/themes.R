@@ -64,6 +64,9 @@ paper_theme <- function()
 #' @title Theme adopted from Jana
 #'
 #' @description This theme changes font sizes for plots used in papers
+#'
+#' @param title.hjust  hjust of title
+#' @param legend_pos position of legend
 #' @export
 #' @import ggplot2
 jana_theme <- function(title.hjust = 0, legend_pos="bottom")
@@ -75,7 +78,7 @@ jana_theme <- function(title.hjust = 0, legend_pos="bottom")
         axis.title.y = ggplot2::element_text(size = 8, face = "bold"),
         plot.title   = ggplot2::element_text(size = 8, face = "bold",
                                              hjust = title.hjust),
-        plot.margin  = ggplot2::rep(grid::unit(1, "cm"), 4),
+        plot.margin  = rep(grid::unit(1, "cm"), 4),
         strip.text.x = ggplot2::element_text(size = 8),
         strip.text.y = ggplot2::element_text(size = 8),
         axis.line    = ggplot2::element_blank(),

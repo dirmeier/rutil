@@ -20,4 +20,5 @@ Imports:
     purrr,
     methods,
     ggplot2,
-    ggsci
+    ggsci,
+    cowplot
