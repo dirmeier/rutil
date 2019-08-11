@@ -32,8 +32,7 @@
 #' @param height  height of plot in inch
 #' @param dpi  dpi
 #' @param format  vector of file suffixes
-saveplot <- function(p, filename,
-                     out.folders,
+saveplot <- function(p, filename, out.folders,
                      width=10, height=10, dpi=720,
                      format=c("svg", "eps", "png"))
 {
@@ -41,8 +40,10 @@ saveplot <- function(p, filename,
   {
     for (i in format)
     {
-      outfl <- paste0(f, filename, ".", i)
-      ggplot2::ggsave(outfl,  plot=p, width=width, height=height, dpi=dpi)
+      outfl <- file.path(f, paste0(filename, ".", i))
+      try({
+        ggplot2::ggsave(outfl,  plot=p, width=width, height=height, dpi=dpi)
+      })
     }
   }
 }
