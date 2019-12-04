@@ -23,20 +23,27 @@
 #' @description This theme changes font sizes for plots uses in slides.
 #' @export
 #' @import ggplot2
-slides_theme <- function()
+theme_slides <- function()
 {
-    ggplot2::theme_minimal() +
-      ggplot2::theme(
-        text = ggplot2::element_text(size=16, family="Arial Narrow"),
-        axis.title.x     = ggplot2::element_text(size=30),
-        axis.title.y     = ggplot2::element_text(size=30),
-        axis.text.x      = ggplot2::element_text(size=25),
-        axis.text.y      = ggplot2::element_text(size=25),
-        plot.title       = ggplot2::element_text(size=30),
-        legend.text      = ggplot2::element_text(size=25),
-        legend.title     = ggplot2::element_text(size=30),
-        strip.text       = ggplot2::element_text(size=25),
-        panel.grid.minor = ggplot2::element_blank())
+  cowplot::background_grid(
+    major = "y", minor = "y",
+    colour.major = "grey90", colour.minor = "grey90",
+    size.major = 0.2, size.minor = 0.2) +
+  ggplot2::theme(
+    text = element_text(family="Avenir"),
+    panel.background = element_blank(),
+    axis.ticks = element_line(size=1),
+    axis.line.x = element_line(size=.2),
+    axis.line.y = element_line(size=.2),
+    axis.title.x = ggplot2::element_text(size=30, face = "bold", hjust = 0.95),
+    axis.title.y = ggplot2::element_text(size=30, face = "bold", hjust = 0.95),
+    axis.text.x      = ggplot2::element_text(size=25),
+    axis.text.y      = ggplot2::element_text(size=25),
+    plot.title       = ggplot2::element_text(size=30),
+    legend.text      = ggplot2::element_text(size=25),
+    legend.title     = ggplot2::element_text(size=30),
+    strip.text       = ggplot2::element_text(size=25),
+    panel.grid.minor = ggplot2::element_blank())
 }
 
 
@@ -69,26 +76,21 @@ paper_theme <- function()
 #' @param legend_pos position of legend
 #' @export
 #' @import ggplot2
-jana_theme <- function(title.hjust = 0, legend_pos="bottom")
+theme_general <- function(title.hjust = 0, legend_pos="bottom")
 {
+  cowplot::background_grid(
+    major = "y", minor = "y",
+    colour.major = "grey90", colour.minor = "grey90",
+    size.major = 0.2, size.minor = 0.2)  +
     ggplot2::theme(
-        axis.text    = ggplot2::element_text(size = 8),
-        axis.title.x = ggplot2::element_text(size = 8, face = "bold",
-                                             hjust = 1),
-        axis.title.y = ggplot2::element_text(size = 8, face = "bold"),
-        plot.title   = ggplot2::element_text(size = 8, face = "bold",
-                                             hjust = title.hjust),
-        plot.margin  = rep(grid::unit(1, "cm"), 4),
-        strip.text.x = ggplot2::element_text(size = 8),
-        strip.text.y = ggplot2::element_text(size = 8),
-        axis.line    = ggplot2::element_blank(),
-        legend.position = legend_pos,
-        legend.text  = ggplot2::element_text(size = 8),
-        legend.title = ggplot2::element_text(size = 8)) +
-    cowplot::background_grid(
-            major = "y", minor = "y",
-            colour.major = "grey80", colour.minor = "grey90",
-            size.major = 0.2, size.minor = 0.2)
+      text=element_text(size=16,  family="Avenir"),
+      axis.text = ggplot2::element_text(size=12),
+      panel.background = element_blank(),
+      axis.ticks = element_line(size=1),
+      axis.line.x = element_line(size=.2),
+      axis.line.y = element_line(size=.2),
+      axis.title.x = ggplot2::element_text(size=15, face = "bold", hjust = 0.95),
+      axis.title.y = ggplot2::element_text(size=15, face = "bold", hjust = 0.95))
 }
 
 

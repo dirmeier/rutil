@@ -4,8 +4,8 @@
 \alias{saveplot}
 \title{Save a plot to multiple places with multiple formats}
 \usage{
-saveplot(p, filename, out.folders, width = 10, height = 10, dpi = 720,
-  format = c("svg", "eps", "png"))
+saveplot(p, filename, out.folders, width = 10, height = 10,
+  dpi = 720, format = c("svg", "eps", "png"))
 }
 \arguments{
 \item{p}{the plot to save}
